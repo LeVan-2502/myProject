@@ -496,7 +496,7 @@ if (isset($_SESSION['admin'])) {
                         </div>
                     </div>
                 </div>
-    </div>
+                </div>
     `;
                     dataContainer.innerHTML += productElement;
                 }

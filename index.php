@@ -14,6 +14,7 @@ require_once './controllers/TaiKhoanController.php';
 require_once './controllers/GioHangController.php';
 require_once './controllers/OnlineCheckoutController.php';
 require_once './controllers/BaiVietController.php';
+require_once './controllers/QuenMatKhauController.php';
 
 // Require toàn bộ file Models
 require_once './models/Home.php';
@@ -26,6 +27,7 @@ require_once './models/GioHang.php';
 require_once './models/ChiTietGioHang.php';
 require_once './models/OnlineCheckout.php';
 require_once './models/BaiViet.php';
+require_once './models/QuenMatKhau.php';
 
 
 // Route
@@ -62,6 +64,11 @@ match ($act) {
     'post-capnhattaikhoan' => (new TaiKhoanController())->postCapNhatTaiKhoan(),
     'chitiet-donhang' => (new TaiKhoanController())->chiTietDonHang(),
 
+    'form-quen-matkhau' => (new QuenMatKhauController())->quenMatKhau(),
+    'post-quen-matkhau' => (new QuenMatKhauController())->postQuenMatKhau(),
+    'formdatlai-matkhau' => (new QuenMatKhauController())->datLaiMatKhau(),
+    'post-datlai-matkhau' => (new QuenMatKhauController())->postDatLaiMatKhau(),
+
     'add-giohang' => (new GioHangController())->themGioHang(),
     'list-giohang' => (new GioHangController())->listGioHang(),
     'capnhat-giohang' => (new GioHangController())->capNhatGioHang(),
@@ -77,6 +84,7 @@ match ($act) {
     'delete-itemlichsudonhang' => (new GioHangController())->deleteItemLichSuDonHang(),
     'post-binhluan' => (new ChiTietSanPhamController())->postBinhLuan(),
 
-    'baiviet' => (new BaiVietController())->blog(),
+    'baiviet' => (new BaiVietController())->listBaiViet(),
+    'chitiet-baiviet' => (new BaiVietController())->chiTietBaiViet(),
 
 };

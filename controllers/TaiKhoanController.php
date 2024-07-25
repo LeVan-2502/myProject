@@ -17,6 +17,7 @@ class TaiKhoanController
         $taiKhoan = $this->modelTaiKhoan->getDetailTaiKhoan($id);
         require_once './views/taikhoan/myaccount.php';
     }
+   
 
     public function formCapNhatTaiKhoan()
     {
@@ -122,4 +123,6 @@ class TaiKhoanController
         require_once './views/taikhoan/chitietdonhang.php';
         deleteSessionError();
     }
+
+   
 }

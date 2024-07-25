@@ -112,12 +112,5 @@ class TaiKhoan
             $this->debug($e);
         }
     }
-
-    function debug($e)
-    {
-        echo '<pre>';
-        print_r($e);
-        echo '</pre>';
-        die();
-    }
+    
 }
